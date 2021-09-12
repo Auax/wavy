@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wavy/static/css/main.9b01a0f0.chunk.css",
+    "main.js": "/wavy/static/js/main.d7dd00d7.chunk.js",
+    "main.js.map": "/wavy/static/js/main.d7dd00d7.chunk.js.map",
+    "runtime-main.js": "/wavy/static/js/runtime-main.50df1d48.js",
+    "runtime-main.js.map": "/wavy/static/js/runtime-main.50df1d48.js.map",
+    "static/js/2.73c7fc71.chunk.js": "/wavy/static/js/2.73c7fc71.chunk.js",
+    "static/js/2.73c7fc71.chunk.js.map": "/wavy/static/js/2.73c7fc71.chunk.js.map",
+    "static/js/3.50ab2e30.chunk.js": "/wavy/static/js/3.50ab2e30.chunk.js",
+    "static/js/3.50ab2e30.chunk.js.map": "/wavy/static/js/3.50ab2e30.chunk.js.map",
+    "index.html": "/wavy/index.html",
+    "static/css/main.9b01a0f0.chunk.css.map": "/wavy/static/css/main.9b01a0f0.chunk.css.map",
+    "static/js/2.73c7fc71.chunk.js.LICENSE.txt": "/wavy/static/js/2.73c7fc71.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50df1d48.js",
+    "static/js/2.73c7fc71.chunk.js",
+    "static/css/main.9b01a0f0.chunk.css",
+    "static/js/main.d7dd00d7.chunk.js"
+  ]
+}
