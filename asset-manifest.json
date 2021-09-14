@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wavy/static/css/main.4d8b4efc.chunk.css",
-    "main.js": "/wavy/static/js/main.52045f52.chunk.js",
-    "main.js.map": "/wavy/static/js/main.52045f52.chunk.js.map",
+    "main.js": "/wavy/static/js/main.d83d0449.chunk.js",
+    "main.js.map": "/wavy/static/js/main.d83d0449.chunk.js.map",
     "runtime-main.js": "/wavy/static/js/runtime-main.50df1d48.js",
     "runtime-main.js.map": "/wavy/static/js/runtime-main.50df1d48.js.map",
     "static/js/2.8cc6cae4.chunk.js": "/wavy/static/js/2.8cc6cae4.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.50df1d48.js",
     "static/js/2.8cc6cae4.chunk.js",
     "static/css/main.4d8b4efc.chunk.css",
-    "static/js/main.52045f52.chunk.js"
+    "static/js/main.d83d0449.chunk.js"
   ]
 }
