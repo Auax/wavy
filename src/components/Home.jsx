@@ -24,7 +24,7 @@ const Home = () => {
 		<div className="home">
 			<div className="container header text-center mt-5">
 				<h1 className="title">Find Rooms</h1>
-				<p className="subtitle">Private rooms are currently not implemented. The feature will be implemented soon.</p>
+				<p className="subtitle">Private rooms are currently not enabled. The feature will be implemented soon.</p>
 				<Link to="/create" className="btn button-md" >Create Room</Link>
 			</div>
 			<div className="container mt-4">

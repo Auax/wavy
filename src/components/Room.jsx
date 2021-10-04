@@ -53,21 +53,28 @@ const Room = () => {
         }
     };
 
+    const parseMessage = (getter) => {
+        return (
+            <div><span className="message-sender me-2">{getter["user"]}</span>
+                <div className="mb-1">
+                    <div className={getter["user"] === username ?
+                        "message message-from-me d-inline-block" : "message message-from-user d-inline-block"}>
+                        <p className={getter["user"] === username ?
+                            "message-text m-0 d-inline" : "message-text m-0 d-inline"}>{getter["msg"]}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     const chatContent = (user, messages) => {
         let content = []
         if (messages.length > 0) {
             messages.map((getter, i) => (
                 content.push(
                     <div key={i}>
-                        <span className="message-sender me-2">{getter["user"]}</span>
-                        <div className="mb-1">
-                            <div className={getter["user"] === username ?
-                                "message message-from-me d-inline-block" : "message message-from-user d-inline-block"}>
-                                <p className={getter["user"] === username ?
-                                    "message-text m-0 d-inline" : "message-text m-0 d-inline"}>{getter["msg"]}
-                                </p>
-                            </div>
-                        </div>
+                        {parseMessage(getter)}
                     </div>
                 )
             ));

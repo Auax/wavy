@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
 body {
     background-color: #1a191a;
     margin: 0;
@@ -80,4 +79,8 @@ h1, h2, h3, h4, h5, h6, p, span, label {
 
 .button-sm {
     font-size: .8em;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
 }

@@ -52,34 +52,41 @@ const validateOnChange = (id, length, warnText, lenghtOver = false) => {
 function CreateRoom() {
     const onSubmitForm = (event) => {
         event.preventDefault();
-        // Retrieve field values
-        let name_ = document.getElementById("room-name").value;
-        let description_ = document.getElementById("room-description").value;
-        let is_private_ = document.getElementById("private-room-ch").checked;
-        let password_ = document.getElementById("room-password").value;
 
-        // Create post request to API endpoint
-        fetch('https://wavy-chat.herokuapp.com/api/create/post', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-            body: JSON.stringify({
-                name: name_,
-                description: description_,
-                is_private: is_private_,
-                password: password_
-            })
-        })
-            .then((response) => response.json()) // Convert response to JSON obj
-            .then((data) => {
-                console.log(`Data received: ${JSON.stringify(data)}`);
-                if (data[200]) {
-                    // Redirect to room
-                    window.location.replace(`#/room/${data[200]}`)
-                }
-                else {
-                    ShowError(data[400]);
-                }
+        // Captcha
+        window.grecaptcha.ready(function () {
+            window.grecaptcha.execute('6Lf0A2kcAAAAAL0vjtKP48OV4tdBGFStIryPOtnN', { action: 'submit' }).then(function (token) {
+                // Retrieve field values
+                let name_ = document.getElementById("room-name").value;
+                let description_ = document.getElementById("room-description").value;
+                let is_private_ = document.getElementById("private-room-ch").checked;
+                let password_ = document.getElementById("room-password").value;
+
+                // Create post request to API endpoint
+                fetch('https://wavy-chat.herokuapp.com/api/create/post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json; charset=UTF-8' },
+                    body: JSON.stringify({
+                        name: name_,
+                        description: description_,
+                        is_private: is_private_,
+                        password: password_,
+                        captcha_token: token
+                    })
+                })
+                    .then((response) => response.json()) // Convert response to JSON obj
+                    .then((data) => {
+                        console.log(`Data received: ${JSON.stringify(data)}`);
+                        if (data[200]) {
+                            // Redirect to room
+                            window.location.replace(`#/room/${data[200]}`)
+                        }
+                        else {
+                            ShowError(data[400]);
+                        }
+                    });
             });
+        });
     }
 
     return (
@@ -111,7 +118,7 @@ function CreateRoom() {
                                 <input type="password" className="form-control" id="room-password" name="password"
                                     onKeyUp={() => validateOnChange("room-password", 5, "The password must be at least 4 characters.")} tabIndex="0" disabled></input>
                             </div>
-                            <button type="submit" className="btn button-md">Submit</button>
+                            <button type="submit" className="btn button-md g-recaptcha" data-sitekey="reCAPTCHA_site_key">Submit</button>
                             <div id="password-help" className="form-text">You can't change the password once the room is created.</div>
                         </form>
                     </div>
