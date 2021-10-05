@@ -180,3 +180,8 @@
   font-size: .8em;
   position: relative;
 }
+
+.message a {
+  color: #d4d4d4 !important;
+  font-style: italic !important;
+}
