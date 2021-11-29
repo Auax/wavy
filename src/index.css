@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("__globals.css");
+
+.popup {
+    top: 0;
+    background-color: rgba(34, 34, 34, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+.fa-lock {
+    color: rgb(114, 114, 114);
+    margin-left: 20px;
+    transform: translateY(-2px);
+    font-size: .8em;
+}
+
+.navbar {
+    z-index: 2;
+    background-color: #222122 !important;
+    border-bottom: 1px solid rgb(27, 27, 27) !important;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-family: 'SanFrancisco', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.navbar-element {
+    color: #ebebeb;
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.navbar-element:hover {
+    color: #99bdff;
+}
+
+.title {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-size: 2.8em;
+    letter-spacing: 0.01em !important;
+    font-weight: 600;
+}
+
+.title-md {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.01em !important;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-family: "Prompt", sans-serif;
+    color: #a3a3a3;
+}
+
+.bot-card {
+    padding: 20px;
+    border: 1px solid;
+    background-color: #242525a8;
+    border-radius: 6px;
+    font-family: SanFrancisco, sans-serif;
+    word-spacing: -.3em !important;
+}
+
+.bot-card:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    border-color: #3b3b3b;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.card-img {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    border-radius: 22px;
+}
+
+.bot-card:hover .card-img {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bot-card a {
+    text-decoration: none !important;
+}
+
+.card-img {
+    width: 100px;
+    height: 100px;
+}
+
+.card-title {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+}
+
+.card-subtitle {
+    font-size: .8em;
+    color: rgb(138, 138, 138);
+}
+
+/* ROOM */
+
+.chat-input-container {
+    position: fixed;
+    bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.chat-input-container>* {
+    padding: 10px;
+}
+
+.send-button {
+    background-color: rgb(61, 61, 61);
+    border-color: rgba(68, 68, 68, 1);
+}
+
+.send-button:hover {
+    background-color: rgba(68, 68, 68, 1) !important;
+}
+
+.send-button:hover>i {
+    color: #9eb8ff !important;
+}
+
+.send-button>i {
+    color: #a3a3a3;
+}
+
+/* Container of all div messages */
+
+.messages {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+/* Container of the text and user */
+
+.message {
+    padding: 5px 10px 5px 10px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.message-text {
+    word-wrap: break-word;
+    line-height: 20px;
+}
+
+.message-from-me {
+    background-color: #1982FC;
+}
+
+.message-from-user {
+    background-color: #333333;
+}
+
+.message-sender {
+    color: #555757;
+    font-size: .8em;
+    position: relative;
+}
+
+.message a {
+    color: #d4d4d4 !important;
+    font-style: italic !important;
+}
